@@ -14,129 +14,78 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 export default function Home() {
 
 
-    var life_player_1 = 20;
-    var life_player_2 = 22;
-
-    const [life, setLife] = useState(20);
+    const [lifing_1, setLifing_1] = useState(20);
+    const [lifing_2, setLifing_2] = useState(20);
 
 
-    function addPlus() {
-
-        setLife(++life_player_1);
-        //console.log(life_player_1);
+    function addPlus1(num) {
+        setLifing_1(++num);   
     }
 
-    function addLess() {
-        --life_player_1;
-        //console.log(life_player_1);
+    function addLess1(num) {
+        setLifing_1(--num);  
+    }
+
+    function addPlus2(num) {
+        setLifing_2(++num);   
+    }
+
+    function addLess2(num) {
+        setLifing_2(--num);  
     }
 
 
     return (
 
-        <
-        View style = { styles.container } >
+        <View style={styles.container} >
 
-        <
-        View style = { styles.plane_1 } >
+            <View style={styles.plane_1} >
 
-        <
-        View style = { styles.top_pane } >
-        <
-        TouchableOpacity onPress = {
-            () => {}
-        } >
-        <
-        SvgUri style = { select_color_img }
-        source = { select_color_img }
-        /> < /
-        TouchableOpacity > <
-        /View>
+                <View style={styles.top_pane}>
+                    <TouchableOpacity onPress={() => { }}>
+                        <SvgUri style={select_color_img} source={select_color_img}/>
+                    </TouchableOpacity >
+                </View>
 
 
-        <
-        View style = { styles.center_pane } >
-        <
-        TouchableOpacity onPress = {
-            () => { addLess() }
-        } >
-        <
-        SvgUri style = { styles.less_img }
-        source = { less_img }
-        /> < /
-        TouchableOpacity >
+                <View style={styles.center_pane}>
+                    <TouchableOpacity onPress={() => { addLess1(lifing_1) }}>
+                        <SvgUri style={styles.less_img} source={less_img}/>
+                    </TouchableOpacity >
 
-        <
-        Text style = { styles.life } > { life } < /Text> <
-        Home life = { 12 } > < /Home>
+                    <Text style={styles.life}>{lifing_1}</Text>
 
-        <
-        TouchableOpacity onPress = {
-            () => { addPlus() }
-        } >
-        <
-        SvgUri style = { styles.plus_img }
-        source = { plus_img }
-        /> < /
-        TouchableOpacity >
+                    <TouchableOpacity onPress={() => { addPlus1(lifing_1)}} >
+                        <SvgUri style={styles.plus_img} source={plus_img}/>
+                    </TouchableOpacity >
 
-        <
-        /View>
+                </View>
 
 
-        <
-        View style = { styles.bottom_pane } >
-        <
-        TouchableOpacity onPress = {
-            () => {}
-        } >
-        <
-        SvgUri style = { select_color_img }
-        source = { select_color_img }
-        /> < /
-        TouchableOpacity >
+                <View style={styles.bottom_pane}>
+                    <TouchableOpacity onPress={() => {}}>
+                        <SvgUri style={select_color_img} source={select_color_img}/>
+                    </TouchableOpacity>
 
-        <
-        TouchableOpacity onPress = {
-            () => {}
-        } >
-        <
-        SvgUri style = { grant_img }
-        source = { grant_img }
-        /> < /
-        TouchableOpacity >
+                    <TouchableOpacity onPress={() => {}}>
+                        <SvgUri style={grant_img} source={grant_img}/>
+                    </TouchableOpacity >
+
+                </View>
+
+            </View>
+
+            <View style={styles.center_bar}>
+                <SvgUri style={styles.logo_img} source={logo_img}/>
+                <View style={styles.line}></View>
+            </View >
 
 
-        <
-        /View>
+            <View style={styles.plane_2}>
+                <Text style={styles.life}>{lifing_2}</Text>
+            </View>
 
-
-
-
-        <
-        /View>
-
-        <
-        View style = { styles.center_bar } >
-        <
-        SvgUri style = { styles.logo_img }
-        source = { logo_img }
-        /> <
-        View style = { styles.line } > < /View> < /
-        View >
-
-
-        <
-        View style = { styles.plane_2 } >
-
-        <
-        Text style = { styles.life } > { life_player_2 } < /Text>
-
-        <
-        /View>
-
-        <
-        /View>
+        </View>
 
 
     );
