@@ -10,7 +10,7 @@
         "version": "1.0.0",
         "orientation": "portrait",
         "icon": "./assets/icon.png",
-        "sdkVersion": "34.0.0",
+        "sdkVersion": "37.0.0",
         "splash": {
             "image": "./assets/splash.png",
             "resizeMode": "contain",
