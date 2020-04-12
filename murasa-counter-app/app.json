@@ -1,6 +1,6 @@
 {
     "expo": {
-        "name": "murasa-counter-app",
+        "name": "Murasa COUNTER",
         "slug": "murasa-counter-app",
         "platforms": [
             "ios",
@@ -10,6 +10,7 @@
         "version": "1.0.0",
         "orientation": "portrait",
         "icon": "./assets/icon.png",
+        "sdkVersion": "34.0.0",
         "splash": {
             "image": "./assets/splash.png",
             "resizeMode": "contain",
@@ -22,7 +23,13 @@
             "**/*"
         ],
         "ios": {
-            "supportsTablet": true
+            "supportsTablet": true,
+            "bundleIdentifier": "com.arkikis.murasacounter",
+            "buildNumber": "1.0.0"
+        },
+        "android": {
+            "package": "com.arkikis.murasacounter",
+            "versionCode": 1
         }
     }
 }
