@@ -5,12 +5,14 @@ export default StyleSheet.create({
     container: {
 
         flex: 1,
+        flexDirection: "column",
         paddingHorizontal: 10,
-        paddingTop: Constants.statusBarHeight + 20,
+        paddingTop: Constants.statusBarHeight + 10,
         backgroundColor: "#011638",
 
     },
-    life: {
+
+    life_text: {
 
         textAlign: "center",
         color: "#DEFFFC",
@@ -23,6 +25,19 @@ export default StyleSheet.create({
 
 
     },
+
+    life_text_lose: {
+
+        textAlign: "center",
+        color: "red",
+        fontSize: 150,
+        //backgroundColor: "#444",
+        marginLeft: 30,
+        marginRight: 30,
+        width: 180,
+        height: 180,
+    },
+
     plus_img: {
         marginTop: 85,
 
@@ -34,74 +49,145 @@ export default StyleSheet.create({
     },
 
     select_color_img: {
-
+        marginRight: 120,
     },
-    grant_img: {
-        backgroundColor: 'green',
-    },
-
 
     center_bar: {
         // backgroundColor: 'blue',
+        alignItems: "center",
         flexDirection: 'row',
-        justifyContent: "space-between",
-        height: 70
+        //justifyContent: "space-between",
 
     },
 
-    logo_img: {
-        marginTop: 15,
-    },
 
-
-    line: {
-        backgroundColor: '#C7D9B7',
+    line_1: {
+        backgroundColor: '#CDCDCD',
         height: 1,
-        width: 295,
-        marginTop: 35
+        width: 120,
+        marginRight: 10,
+        marginLeft: 5,
+
     },
 
-    bottom_pane: {
-        flexDirection: "row",
+    line_2: {
+        backgroundColor: '#CDCDCD',
+        height: 1,
+        width: 135,
+        marginLeft: 10,
+
+    },
+
+    value_mdx: {
+        textAlign: "center",
+        color: "#060138",
+        fontSize: 15,
+        fontWeight: "bold",
+    },
+
+    circle_mdx: {
         alignItems: "center",
-        justifyContent: "space-between",
-        //backgroundColor: "#E5D6",
+        justifyContent: "center",
+        height: 30,
+        width: 30,
+        backgroundColor: '#DEFFFC',
+        borderRadius: 5,
+
+
+    },
+    bottom_pane_1: {
+        flexDirection: "row",
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
+        // backgroundColor: "#245",
         width: 340,
-        height: 100
+        height: 40,
+        marginTop: 40,
+        marginBottom: -20,
+
+
+    },
+
+    bottom_pane_2: {
+        flexDirection: "row",
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
+        // backgroundColor: "#E5D6",
+        width: 340,
+        height: 40,
+        marginTop: 40
 
     },
 
 
-    center_pane: {
+    center_pane_1: {
 
         flexDirection: "row",
         justifyContent: "space-between",
     },
 
-    top_pane: {
+    center_pane_2: {
+
+        flexDirection: "row",
+        justifyContent: "space-between",
+    },
+
+    top_pane_1: {
         alignItems: "center",
-        backgroundColor: "silver",
+        flexDirection: "row",
+        // backgroundColor: "green",
+        width: 320,
+
+    },
+
+    top_pane_2: {
+        alignItems: "center",
+        flexDirection: "row-reverse",
+        //backgroundColor: "green",
         width: 320,
 
     },
 
     plane_1: {
         transform: [{ rotate: '180deg' }],
-        //backgroundColor: "#823",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
+        //backgroundColor: "#333",
 
     },
 
     plane_2: {
-        backgroundColor: "#333",
-    },
-    modal: {
-
-        width: 50,
-        height: 50
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-between",
+        //backgroundColor: "#333",
 
     },
+
+    //MODAL
+
+    modal_container: {
+        flex: 1,
+        //backgroundColor: "#011638",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+
+    modal_1: {
+
+        backgroundColor: "silver",
+        alignItems: "center",
+        justifyContent: "space-around",
+        flexDirection: "row",
+        width: 340,
+        height: 150,
+        borderRadius: 10
+
+    },
+    modal_2: {
+        backgroundColor: "blue",
+
+    }
 
 });
