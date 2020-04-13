@@ -1,21 +1,22 @@
 import React, { useState } from 'react'
-import { View, Text, StatusBar, Modal, TouchableHighlight } from 'react-native'
+import { View, Image, Text, StatusBar, Modal, TouchableHighlight } from 'react-native'
 import styles from './styles';
-import SvgUri from 'react-native-svg-uri';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-import plus_img from '../../assets/plus.svg';
-import less_img from '../../assets/less.svg';
-import logo_img from '../../assets/logo.svg';
-import grant_img from '../../assets/grant.svg';
-import refresh_img from '../../assets/refresh.svg';
-import select_color_img from '../../assets/select_color.svg';
-import red from '../../assets/red.svg';
-import blue from '../../assets/blue.svg';
-import green from '../../assets/green.svg';
-import black from '../../assets/black.svg';
-import white from '../../assets/white.svg';
 
+import { FontAwesome5 } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
+
+
+import logo_img from '../../assets/logo.png';
+import refresh_img from '../../assets/refresh.png';
+import select_color_img from '../../assets/select_color.png';
+import red from '../../assets/red.png';
+import blue from '../../assets/blue.png';
+import green from '../../assets/green.png';
+import black from '../../assets/black.png';
+import white from '../../assets/white.png';
 
 
 export default function Home() {
@@ -30,8 +31,17 @@ export default function Home() {
     const [color_2, setColor2] = useState(select_color_img);
     const [player, setPlayer] = useState(0);
 
+    function checkModalOrientation() {
+        if (player != 1) {
+            return styles.modal_1;
+        } else {
+            return styles.modal_2;
+        }
+    }
+
+
     function checkPlayer(color) {
-        if (player ==  1) {
+        if (player == 1) {
             setColor1(color);
         } else {
             setColor2(color);
@@ -105,13 +115,13 @@ export default function Home() {
 
                 <View style={styles.center_pane_1}>
                     <TouchableOpacity onPress={() => { addLess1(lifing_1) }}>
-                        <SvgUri style={styles.less_img} source={less_img} />
+                        <MaterialIcons name="remove-circle" style={styles.less_img} size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 
                     <Text style={loseMath1()}>{lifing_1}</Text>
 
                     <TouchableOpacity onPress={() => { addPlus1(lifing_1) }} >
-                        <SvgUri style={styles.plus_img} source={plus_img} />
+                        <MaterialCommunityIcons style={styles.plus_img} name="plus-circle" size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 
                 </View>
@@ -120,11 +130,11 @@ export default function Home() {
                 <View style={styles.bottom_pane_1}>
 
                     <TouchableOpacity onPress={() => { setPlayer(1); setModalVisible(true); }}>
-                        <SvgUri style={styles.select_color_img} source={color_1} />
+                        <Image style={styles.select_color_img} source={color_1} />
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => { addGrant1(math_win_1) }}>
-                        <SvgUri style={styles.grant_img} source={grant_img} />
+                        <FontAwesome5 name="hands-helping" size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 
                 </View>
@@ -132,11 +142,11 @@ export default function Home() {
             </View>
 
             <View style={styles.center_bar}>
-                <SvgUri style={styles.logo_img} source={logo_img} />
+                <Image style={styles.logo_img} source={logo_img} />
                 <View style={styles.line_1}></View>
 
                 <TouchableOpacity onPress={() => { refreshMath() }}>
-                    <SvgUri style={styles.refresh_img} source={refresh_img} />
+                    <Image style={styles.refresh_img} source={refresh_img} />
                 </TouchableOpacity >
 
                 <View style={styles.line_2}></View>
@@ -148,41 +158,41 @@ export default function Home() {
 
                 <View style={styles.modal_container}>
 
-                    <View style={styles.modal_1}>
+                    <View style={checkModalOrientation()}>
 
                         <TouchableHighlight onPress={() => {
                             setModalVisible(!modalVisible);
                             checkPlayer(red);
                         }}>
-                            <SvgUri source={red} />
+                            <Image source={red} />
                         </TouchableHighlight>
 
                         <TouchableHighlight onPress={() => {
                             setModalVisible(!modalVisible);
                             checkPlayer(blue);
                         }}>
-                            <SvgUri source={blue} />
+                            <Image source={blue} />
                         </TouchableHighlight>
 
                         <TouchableHighlight onPress={() => {
                             setModalVisible(!modalVisible);
                             checkPlayer(black);
                         }}>
-                            <SvgUri source={black} />
+                            <Image source={black} />
                         </TouchableHighlight>
 
                         <TouchableHighlight onPress={() => {
                             setModalVisible(!modalVisible);
                             checkPlayer(green);
                         }}>
-                            <SvgUri source={green} />
+                            <Image source={green} />
                         </TouchableHighlight>
 
                         <TouchableHighlight onPress={() => {
                             setModalVisible(!modalVisible);
                             checkPlayer(white);
                         }}>
-                            <SvgUri source={white} />
+                            <Image source={white} />
                         </TouchableHighlight>
 
                     </View>
@@ -203,13 +213,13 @@ export default function Home() {
 
                 <View style={styles.center_pane_2}>
                     <TouchableOpacity onPress={() => { addLess2(lifing_2) }}>
-                        <SvgUri style={styles.less_img} source={less_img} />
+                        <MaterialIcons name="remove-circle" style={styles.less_img} size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 
                     <Text style={loseMath2()}>{lifing_2}</Text>
 
                     <TouchableOpacity onPress={() => { addPlus2(lifing_2) }} >
-                        <SvgUri style={styles.plus_img} source={plus_img} />
+                        <MaterialCommunityIcons style={styles.plus_img} name="plus-circle" size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 
                 </View>
@@ -218,15 +228,13 @@ export default function Home() {
 
 
 
-
-
                     <TouchableOpacity onPress={() => { setPlayer(2); setModalVisible(true); }}>
-                        <SvgUri style={styles.select_color_img} source={color_2} />
+                        <Image style={styles.select_color_img} source={color_2} />
                     </TouchableOpacity>
 
 
                     <TouchableOpacity onPress={() => { addGrant2(math_win_2) }}>
-                        <SvgUri style={styles.grant_img} source={grant_img} />
+                        <FontAwesome5 name="hands-helping" size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 
                 </View>
