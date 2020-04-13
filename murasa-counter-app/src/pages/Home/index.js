@@ -48,6 +48,12 @@ export default function Home() {
         }
     }
 
+    function checkLengthLife1() {
+        if (lifing_1 % 100 == 0 || lifing_1 >= 100) {
+            return 
+        }
+    }
+
 
     function loseMath1() {
         if (lifing_1 <= 0) {
@@ -64,8 +70,8 @@ export default function Home() {
     }
 
     function refreshMath() {
-        setLifing1(20);
-        setLifing2(20);
+        setLifing1(99);
+        setLifing2(99);
         setMathWin1(0);
         setMathWin2(0);
     }
@@ -133,7 +139,7 @@ export default function Home() {
                         <Image style={styles.select_color_img} source={color_1} />
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => { addGrant1(math_win_1) }}>
+                    <TouchableOpacity onPress={() => { addGrant2(math_win_2) }}>
                         <FontAwesome5 name="hands-helping" size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 
@@ -233,7 +239,7 @@ export default function Home() {
                     </TouchableOpacity>
 
 
-                    <TouchableOpacity onPress={() => { addGrant2(math_win_2) }}>
+                    <TouchableOpacity onPress={() => { addGrant1(math_win_1) }}>
                         <FontAwesome5 name="hands-helping" size={30} color="#B1D7D3" />
                     </TouchableOpacity >
 

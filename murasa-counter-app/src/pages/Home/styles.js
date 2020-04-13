@@ -1,5 +1,6 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import Constants from 'expo-constants';
+
 
 export default StyleSheet.create({
     container: {
@@ -17,7 +18,6 @@ export default StyleSheet.create({
         textAlign: "center",
         color: "#DEFFFC",
         fontSize: 150,
-        //backgroundColor: "#444",
         marginLeft: 30,
         marginRight: 30,
         width: 180,
@@ -31,7 +31,6 @@ export default StyleSheet.create({
         textAlign: "center",
         color: "red",
         fontSize: 150,
-        //backgroundColor: "#444",
         marginLeft: 30,
         marginRight: 30,
         width: 180,
@@ -53,10 +52,10 @@ export default StyleSheet.create({
     },
 
     center_bar: {
-        // backgroundColor: 'blue',
         alignItems: "center",
         flexDirection: 'row',
-        //justifyContent: "space-between",
+        width: Dimensions.get('window').width,
+
 
     },
 
@@ -64,7 +63,7 @@ export default StyleSheet.create({
     line_1: {
         backgroundColor: '#CDCDCD',
         height: 1,
-        width: 120,
+        width: 110,
         marginRight: 10,
         marginLeft: 5,
 
@@ -73,7 +72,7 @@ export default StyleSheet.create({
     line_2: {
         backgroundColor: '#CDCDCD',
         height: 1,
-        width: 135,
+        width: 140,
         marginLeft: 10,
 
     },
@@ -99,12 +98,9 @@ export default StyleSheet.create({
         flexDirection: "row",
         alignItems: "flex-end",
         justifyContent: "flex-end",
-        // backgroundColor: "#245",
         width: 340,
         height: 40,
         marginTop: 40,
-        marginBottom: -20,
-
 
     },
 
@@ -112,10 +108,9 @@ export default StyleSheet.create({
         flexDirection: "row",
         alignItems: "flex-end",
         justifyContent: "flex-end",
-        // backgroundColor: "#E5D6",
         width: 340,
         height: 40,
-        marginTop: 40
+        marginTop: 40,
 
     },
 
@@ -135,7 +130,6 @@ export default StyleSheet.create({
     top_pane_1: {
         alignItems: "center",
         flexDirection: "row",
-        // backgroundColor: "green",
         width: 320,
 
     },
@@ -143,7 +137,6 @@ export default StyleSheet.create({
     top_pane_2: {
         alignItems: "center",
         flexDirection: "row-reverse",
-        //backgroundColor: "green",
         width: 320,
 
     },
@@ -153,7 +146,7 @@ export default StyleSheet.create({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-        //backgroundColor: "#333",
+        height: (Dimensions.get('window').height / 2) - 50,
 
     },
 
@@ -161,7 +154,8 @@ export default StyleSheet.create({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-        //backgroundColor: "#333",
+        height: (Dimensions.get('window').height / 2) - 50,
+
 
     },
 
@@ -169,14 +163,13 @@ export default StyleSheet.create({
 
     modal_container: {
         flex: 1,
-        //backgroundColor: "#011638",
         justifyContent: "center",
         alignItems: "center",
     },
 
     modal_1: {
 
-        backgroundColor: "silver",
+        backgroundColor: "#B1D7D3",
         alignItems: "center",
         justifyContent: "space-around",
         flexDirection: "row",
@@ -186,9 +179,9 @@ export default StyleSheet.create({
 
     },
     modal_2: {
-        
+
         transform: [{ rotate: '180deg' }],
-        backgroundColor: "silver",
+        backgroundColor: "#41658A",
         alignItems: "center",
         justifyContent: "space-around",
         flexDirection: "row",
