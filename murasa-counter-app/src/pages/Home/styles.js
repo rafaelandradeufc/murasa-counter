@@ -181,7 +181,7 @@ export default StyleSheet.create({
     modal_2: {
 
         transform: [{ rotate: '180deg' }],
-        backgroundColor: "#41658A",
+        backgroundColor: "#B1D7D3",
         alignItems: "center",
         justifyContent: "space-around",
         flexDirection: "row",

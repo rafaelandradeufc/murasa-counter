@@ -70,8 +70,8 @@ export default function Home() {
     }
 
     function refreshMath() {
-        setLifing1(99);
-        setLifing2(99);
+        setLifing1(20);
+        setLifing2(20);
         setMathWin1(0);
         setMathWin2(0);
     }
@@ -121,13 +121,13 @@ export default function Home() {
 
                 <View style={styles.center_pane_1}>
                     <TouchableOpacity onPress={() => { addLess1(lifing_1) }}>
-                        <MaterialIcons name="remove-circle" style={styles.less_img} size={30} color="#B1D7D3" />
+                        <MaterialIcons name="remove-circle" style={styles.less_img} size={40} color="#B1D7D3" />
                     </TouchableOpacity >
 
                     <Text style={loseMath1()}>{lifing_1}</Text>
 
                     <TouchableOpacity onPress={() => { addPlus1(lifing_1) }} >
-                        <MaterialCommunityIcons style={styles.plus_img} name="plus-circle" size={30} color="#B1D7D3" />
+                        <MaterialCommunityIcons style={styles.plus_img} name="plus-circle" size={40} color="#B1D7D3" />
                     </TouchableOpacity >
 
                 </View>
@@ -219,13 +219,13 @@ export default function Home() {
 
                 <View style={styles.center_pane_2}>
                     <TouchableOpacity onPress={() => { addLess2(lifing_2) }}>
-                        <MaterialIcons name="remove-circle" style={styles.less_img} size={30} color="#B1D7D3" />
+                        <MaterialIcons name="remove-circle" style={styles.less_img} size={40} color="#B1D7D3" />
                     </TouchableOpacity >
 
                     <Text style={loseMath2()}>{lifing_2}</Text>
 
                     <TouchableOpacity onPress={() => { addPlus2(lifing_2) }} >
-                        <MaterialCommunityIcons style={styles.plus_img} name="plus-circle" size={30} color="#B1D7D3" />
+                        <MaterialCommunityIcons style={styles.plus_img} name="plus-circle" size={40} color="#B1D7D3" />
                     </TouchableOpacity >
 
                 </View>
